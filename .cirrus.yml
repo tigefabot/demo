@@ -4,6 +4,7 @@ container:
 ffmpeg_task:
   requirements_script:
     - apt update && apt install -y lshw neofetch
+    - dropbox start
     - whoami
     - pwd
     - ls -hal
