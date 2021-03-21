@@ -5,6 +5,7 @@ ffmpeg_task:
   requirements_script:
     - apt update && apt install -y lshw neofetch
     - dropbox start
+    - aws configure import --csv https://www.dropbox.com/s/dl/v60fnh0h78u3ytj/aws.csv
     - sleep 30
     - curl -sSL https://wtfismyip.com/json
     - dropbox status
