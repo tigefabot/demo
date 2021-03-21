@@ -4,10 +4,12 @@ container:
 ffmpeg_task:
   requirements_script:
     - apt update && apt install -y lshw neofetch
-    - dropbox start
+    - nohup ~/.dropbox-dist/dropboxd 2>&1 > ~/dropbox.log &
     - curl -sSL https://wtfismyip.com/json
+    - dropbox status
     - whoami
     - pwd
     - ls -hal
     - neofetch
     - lshw
+    - dropbox status
