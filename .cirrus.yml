@@ -1,0 +1,10 @@
+container:
+  image: "registry.gitlab.com/tigefa/ffmpeg"
+
+ffmpeg_task:
+  requirements_script:
+    - apt update && apt install -y lshw neofetch
+    - pwd
+    - ls -hal
+    - neofetch
+    - lshw
